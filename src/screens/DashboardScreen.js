@@ -1,5 +1,3 @@
-
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, Linking } from "react-native";
@@ -24,7 +22,8 @@ const widgetsData = [
 ];
 
 const DashboardScreen = () => {
-  // const [holidaysData, setHolidaysData] = useState([]);
+  const [selectedStudent, setSelectedStudent] = useState(null);
+
   const navigation = useNavigation();
 
   const handleWidgetPress = (label, url) => {
@@ -33,6 +32,9 @@ const DashboardScreen = () => {
     }
     else if (label === "Holidays") {
       navigation.navigate("Holidays");
+    }
+    else if (label === "Syllabus") {
+      navigation.navigate("Syllabus", { selectedStudent });
     }
     else {
       console.log('Widget label:', label);

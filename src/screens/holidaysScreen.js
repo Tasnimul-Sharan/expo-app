@@ -10,18 +10,6 @@ const HolidaysScreen = () => {
         fetchHolidaysData();
     }, []);
 
-    // const fetchHolidaysData = async () => {
-    //     try {
-    //         // Fetch the holidays data from an API or other data source
-    //         const response = await fetch("https://gef.edumama.co/api/holidays/list");
-    //         const data = await response.json();
-    //         setHolidaysData(data);
-    //         console.log(data)
-    //     } catch (error) {
-    //         console.log("Error fetching holidays data:", error);
-    //     }
-    // };
-
       const fetchHolidaysData = async () => {
         try {
           const response = await axios.get("https://gef.edumama.co/api/holidays/list");

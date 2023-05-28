@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://gef.edumama.co/api'; 
+const API_BASE_URL = 'https://gef.edumama.co/api';
 
 const instance = axios.create({
     baseURL: API_BASE_URL,

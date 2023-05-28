@@ -6,6 +6,8 @@ import HomeScreen from '../screens/HomeScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AuthContext } from '../hooks/AuthContext';
 import HolidaysScreen from '../screens/holidaysScreen';
+import SyllabusScreen from '../screens/SyllabusScreen';
+// import HolidaysScreen from '../screens/HolidaysScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,7 @@ const Navigation = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Holidays" component={HolidaysScreen} />
+        <Stack.Screen name="Syllabus" component={SyllabusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
 
